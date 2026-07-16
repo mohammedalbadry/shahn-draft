@@ -25,7 +25,7 @@ export function renderOffers() {
     .join('\n');
 
   return `
-  <section id="offers" class="px-5 md:px-12 py-10 md:py-14 bg-base-alt" aria-labelledby="offers-heading">
+  <section id="offers" class="px-5 md:px-12 py-10 md:py-14 bg-canvas-alt" aria-labelledby="offers-heading">
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center gap-5 mb-7">
         <h2 id="offers-heading" class="font-display font-bold text-2xl md:text-3xl uppercase">Today's Offers</h2>

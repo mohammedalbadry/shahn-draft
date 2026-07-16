@@ -15,7 +15,7 @@ export function renderNavbar() {
   <header class="bg-primary relative z-30">
     <div class="flex items-center justify-between px-5 md:px-12 py-4">
       <a href="/" class="flex items-center gap-3">
-        <span class="w-9 h-9 rounded-[9px] bg-base flex items-center justify-center flex-shrink-0">
+        <span class="w-9 h-9 rounded-[9px] bg-canvas flex items-center justify-center flex-shrink-0">
           <i class="${site.logoIcon} text-primary text-[17px]"></i>
         </span>
         <span class="font-display font-bold text-lg text-white tracking-wide uppercase">${site.name}</span>
@@ -26,7 +26,7 @@ export function renderNavbar() {
       </nav>
 
       <div class="flex items-center gap-4 md:gap-[18px] text-white">
-        <a href="#" class="hidden md:inline font-semibold text-sm cursor-pointer hover:opacity-80">Login</a>
+        <a href="#" class="hidden md:inline text-white font-semibold text-sm cursor-pointer hover:opacity-80">Login</a>
         <button type="button" aria-label="Search" class="hidden md:inline-flex">
           <i class="icon-search text-base"></i>
         </button>

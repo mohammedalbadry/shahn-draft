@@ -8,9 +8,11 @@
 @source "../../dist/**/*.html";
 
 @theme {
-  /* Color tokens — see DESIGN_SYSTEM.md §1 */
-  --color-base: #0a0c12;
-  --color-base-alt: #0d0f16;
+  /* Color tokens — see DESIGN_SYSTEM.md §1
+     NOTE: never name a color token "base" — it collides with Tailwind's
+     built-in `text-base` font-size utility and silently breaks it. */
+  --color-canvas: #0a0c12;
+  --color-canvas-alt: #0d0f16;
   --color-nav: #05060a;
   --color-surface: #14141c;
   --color-primary: #6c63ff;
@@ -34,7 +36,7 @@
 
 @layer base {
   body {
-    background-color: var(--color-base);
+    background-color: var(--color-canvas);
     color: var(--color-ink);
     font-family: var(--font-sans);
   }

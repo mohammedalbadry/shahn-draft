@@ -21,7 +21,7 @@ export function renderGames() {
   const consoleCards = consoleGames.map(gameCard).join('\n');
 
   return `
-  <section id="games" class="px-5 md:px-12 py-10 md:py-14 bg-base-alt" aria-labelledby="games-heading">
+  <section id="games" class="px-5 md:px-12 py-10 md:py-14 bg-canvas-alt" aria-labelledby="games-heading">
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <h2 id="games-heading" class="font-display font-bold text-2xl md:text-3xl uppercase">Choose Your Game</h2>

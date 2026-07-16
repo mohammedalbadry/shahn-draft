@@ -13,7 +13,7 @@ export function renderLayout({ title, description, bodyContent, activePath = '/'
 <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="bg-base text-ink font-sans" data-active-path="${activePath}">
+<body class="bg-canvas text-ink font-sans" data-active-path="${activePath}">
 ${bodyContent}
 <script src="/js/main.js" defer></script>
 </body>
