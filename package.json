@@ -1,0 +1,19 @@
+{
+  "name": "shahn-masr-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shahn Masr — game top-up website (static HTML + Tailwind CSS, data-driven sections).",
+  "scripts": {
+    "build:html": "node scripts/build.js",
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/style.css --minify",
+    "build": "npm run build:html && npm run build:css && npm run copy:assets",
+    "copy:assets": "node scripts/copy-assets.js",
+    "watch:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/style.css --watch",
+    "serve": "node scripts/serve.js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/cli": "^4.1.0"
+  }
+}

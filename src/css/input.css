@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Explicit scan sources — templates are .js files (return HTML strings), not .html,
+   so Tailwind's default heuristics need pointing at them directly. */
+@source "../layout.js";
+@source "../pages/**/*.js";
+@source "../sections/**/*.js";
+@source "../../dist/**/*.html";
+
+@theme {
+  /* Color tokens — see DESIGN_SYSTEM.md §1 */
+  --color-base: #0a0c12;
+  --color-base-alt: #0d0f16;
+  --color-nav: #05060a;
+  --color-surface: #14141c;
+  --color-primary: #6c63ff;
+  --color-primary-light: #7b74ff;
+  --color-primary-soft: #9b95ff;
+  --color-gold: #f2b544;
+  --color-ink: #f5f7fa;
+  --color-muted: #9aa4b2;
+  --color-dim: #6b7684;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.15);
+
+  /* Typography — see DESIGN_SYSTEM.md §2 */
+  --font-display: "Rajdhani", ui-sans-serif, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Radius — see DESIGN_SYSTEM.md §4 */
+  --radius-card: 10px;
+  --radius-btn: 8px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-base);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line-strong);
+    border-radius: 8px;
+  }
+
+  a {
+    color: var(--color-primary);
+  }
+
+  a:hover {
+    color: var(--color-primary-light);
+  }
+}
+
+@keyframes bounceDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-bounce-down {
+  animation: bounceDown 1.6s ease-in-out infinite;
+}
